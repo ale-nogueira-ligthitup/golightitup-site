@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <linearGradient id="chamaGrad" x1="0" y1="1" x2="0.35" y2="0">
+      <stop offset="0%" stop-color="#FF6A2B"/>
+      <stop offset="100%" stop-color="#F5B13C"/>
+    </linearGradient>
+  </defs>
+  <rect width="100" height="100" rx="22" fill="#FAF4EA"/>
+  <path fill="url(#chamaGrad)" d="M50 3 C 58 20, 74 30, 74 52 C 74 66, 64 76, 50 76 C 36 76, 26 66, 26 52 C 26 40, 34 34, 39 40 C 41 30, 46 22, 50 3 Z"/>
+  <path fill="#FAF4EA" opacity="0.95" d="M50 34 C 55 44, 60 50, 60 58 C 60 65, 55 70, 50 70 C 45 70, 40 65, 40 58 C 40 52, 44 49, 47 52 C 48 46, 49 41, 50 34 Z"/>
+  <path fill="none" stroke="url(#chamaGrad)" stroke-width="7" stroke-linecap="round" d="M50 66 C 40 66, 33 73, 33 82 C 33 91, 40 98, 50 98 C 60 98, 67 91, 67 82 C 67 76, 63 71, 58 69"/>
+</svg>

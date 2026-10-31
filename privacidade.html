@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Política de Privacidade | Light It Up</title>
+<meta name="description" content="Como a Light It Up, de Alê Nogueira, coleta, usa e protege os seus dados. Privacy Policy in English included." />
+<meta name="theme-color" content="#FAF4EA" />
+<link rel="canonical" href="https://golightitup.com/privacidade.html" />
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="apple-touch-icon" href="/favicon.svg" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Política de Privacidade | Light It Up" />
+<meta property="og:description" content="Como a Light It Up coleta, usa e protege os seus dados." />
+<meta property="og:url" content="https://golightitup.com/privacidade.html" />
+<meta property="og:site_name" content="Light It Up" />
+<meta property="og:locale" content="pt_BR" />
+<meta property="og:locale:alternate" content="en_US" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Mulish:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --luz: #FAF4EA;
+    --creme: #FFFBF4;
+    --brasa: #211436;
+    --tinta: #35293F;
+    --ouro: #F5B13C;
+    --ember: #FF6A2B;
+    --ember-ink: #DB551C;
+    --chama: linear-gradient(165deg, #FF6A2B 0%, #F5B13C 100%);
+    --tinta-dim: rgba(53, 41, 63, 0.78);
+    --tinta-faint: rgba(33, 20, 54, 0.08);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+  body {
+    background-color: var(--luz);
+    color: var(--tinta);
+    font-family: "Mulish", "Segoe UI", sans-serif;
+    font-weight: 400;
+    line-height: 1.75;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    background:
+      radial-gradient(ellipse 90% 55% at 50% -12%, rgba(245, 177, 60, 0.28) 0%, rgba(245, 177, 60, 0) 60%),
+      radial-gradient(ellipse 70% 50% at 12% 8%, rgba(255, 106, 43, 0.10) 0%, rgba(255, 106, 43, 0) 55%),
+      radial-gradient(ellipse 75% 55% at 92% 4%, rgba(255, 176, 120, 0.14) 0%, rgba(255, 176, 120, 0) 55%);
+  }
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    opacity: 0.6;
+    background-image:
+      linear-gradient(var(--tinta-faint) 1px, transparent 1px),
+      linear-gradient(90deg, var(--tinta-faint) 1px, transparent 1px);
+    background-size: 64px 64px;
+    -webkit-mask-image: radial-gradient(ellipse 100% 78% at 50% 0%, #000 0%, transparent 68%);
+            mask-image: radial-gradient(ellipse 100% 78% at 50% 0%, #000 0%, transparent 68%);
+  }
+
+  .wrap { width: 100%; max-width: 820px; margin: 0 auto; padding: 0 24px; }
+
+  a { color: var(--ember-ink); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+  a:hover { color: var(--brasa); }
+  a:focus-visible { outline: 2px solid var(--ember); outline-offset: 3px; border-radius: 4px; }
+
+  .skip { position: absolute; left: -9999px; top: 0; }
+  .skip:focus { left: 16px; top: 12px; background: var(--creme); padding: 8px 14px; border-radius: 10px; z-index: 10; }
+
+  .flame-svg { display: block; }
+  .flame-glow { filter: drop-shadow(0 6px 18px rgba(255, 106, 43, 0.28)); }
+
+  /* ---------- TOPBAR ---------- */
+  header.topbar { position: relative; z-index: 3; padding: 22px 0 6px; }
+  header.topbar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+  .brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; color: var(--brasa); }
+  .brand-name { font-family: "Fraunces", Georgia, serif; font-weight: 500; font-size: 1.25rem; letter-spacing: -0.01em; }
+
+  .lang-switch { display: inline-flex; gap: 6px; }
+  .lang-switch a {
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-decoration: none;
+    color: var(--brasa);
+    padding: 7px 14px;
+    border-radius: 999px;
+    border: 1px solid rgba(33, 20, 54, 0.16);
+    background: rgba(255, 255, 255, 0.6);
+    -webkit-backdrop-filter: blur(6px);
+            backdrop-filter: blur(6px);
+    transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+  }
+  .lang-switch a:hover { transform: translateY(-1px) scale(1.02); border-color: var(--ouro); background: rgba(255, 255, 255, 0.9); }
+
+  /* ---------- TITULO ---------- */
+  .page-head { text-align: center; padding: 36px 0 34px; }
+  .page-head .hero-flame { margin: 0 auto 18px; }
+  .page-head h1 {
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 400;
+    font-size: clamp(2.3rem, 8vw, 3.8rem);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    background: var(--chama);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--ember-ink);
+    padding-bottom: 0.06em;
+  }
+  .page-head .updated { margin-top: 12px; color: var(--tinta-dim); font-size: 0.95rem; }
+
+  /* ---------- CARD ---------- */
+  .card {
+    position: relative;
+    z-index: 2;
+    background: var(--creme);
+    border: 1px solid rgba(33, 20, 54, 0.06);
+    border-radius: 26px;
+    padding: 40px 32px;
+    box-shadow: 0 22px 55px rgba(33, 20, 54, 0.09), 0 2px 8px rgba(33, 20, 54, 0.04);
+    margin-bottom: 28px;
+    scroll-margin-top: 20px;
+  }
+  .card .lang-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ember-ink);
+    margin-bottom: 6px;
+  }
+  .card > h2 {
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 500;
+    font-size: clamp(1.6rem, 5vw, 2.1rem);
+    line-height: 1.2;
+    letter-spacing: -0.015em;
+    color: var(--brasa);
+    margin-bottom: 10px;
+  }
+  .card .lead { color: var(--tinta-dim); font-size: 1.04rem; margin-bottom: 8px; }
+
+  .promise {
+    margin: 22px 0 6px;
+    padding: 16px 20px;
+    border-radius: 16px;
+    background: linear-gradient(165deg, rgba(255, 106, 43, 0.08) 0%, rgba(245, 177, 60, 0.12) 100%);
+    border: 1px solid rgba(245, 177, 60, 0.35);
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 500;
+    font-size: 1.15rem;
+    color: var(--brasa);
+  }
+
+  .card h3 {
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 500;
+    font-size: 1.22rem;
+    line-height: 1.3;
+    color: var(--brasa);
+    margin: 30px 0 8px;
+  }
+  .card p, .card li { color: var(--tinta); font-size: 1.02rem; }
+  .card p + p { margin-top: 10px; }
+  .card ul { padding-left: 1.2em; margin-top: 8px; }
+  .card li { margin-top: 6px; }
+  .card li::marker { color: var(--ember); }
+  .card address { font-style: normal; }
+
+  /* ---------- FOOTER ---------- */
+  footer {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 40px 0 56px;
+    border-top: 1px solid rgba(33, 20, 54, 0.08);
+    margin-top: 18px;
+  }
+  footer .foot-flame { margin: 0 auto 14px; }
+  footer .foot-title { font-family: "Fraunces", Georgia, serif; font-weight: 500; font-size: 1.05rem; color: var(--brasa); }
+  footer .hashtag { color: var(--ember-ink); font-weight: 600; font-size: 0.9rem; margin-top: 8px; }
+  footer .back { display: inline-block; margin-top: 18px; font-size: 0.92rem; }
+
+  /* ---------- ANIMACOES ---------- */
+  @keyframes rise { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes flicker {
+    0%, 100% { transform: scale(1) rotate(0deg); opacity: 1; }
+    45%      { transform: scale(1.04) rotate(-1deg); opacity: 0.92; }
+    70%      { transform: scale(0.985) rotate(0.6deg); opacity: 1; }
+  }
+  .reveal { opacity: 0; animation: rise 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+  .d1 { animation-delay: 0.05s; }
+  .d2 { animation-delay: 0.18s; }
+  .d3 { animation-delay: 0.32s; }
+  .flame-anim { transform-origin: center bottom; animation: flicker 4.5s ease-in-out infinite; }
+
+  @media (max-width: 520px) {
+    .card { padding: 30px 22px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { animation: none; opacity: 1; }
+    .flame-anim { animation: none; }
+    html { scroll-behavior: auto; }
+  }
+</style>
+</head>
+<body>
+
+<a class="skip" href="#pt">Ir para o conteúdo</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="chamaGrad" x1="0" y1="1" x2="0.35" y2="0">
+      <stop offset="0%" stop-color="#FF6A2B" />
+      <stop offset="100%" stop-color="#F5B13C" />
+    </linearGradient>
+    <g id="flameMark">
+      <path d="M50 3 C 58 20, 74 30, 74 52 C 74 66, 64 76, 50 76 C 36 76, 26 66, 26 52 C 26 40, 34 34, 39 40 C 41 30, 46 22, 50 3 Z" fill="url(#chamaGrad)" />
+      <path d="M50 34 C 55 44, 60 50, 60 58 C 60 65, 55 70, 50 70 C 45 70, 40 65, 40 58 C 40 52, 44 49, 47 52 C 48 46, 49 41, 50 34 Z" fill="#FAF4EA" opacity="0.95" />
+      <path d="M50 66 C 40 66, 33 73, 33 82 C 33 91, 40 98, 50 98 C 60 98, 67 91, 67 82 C 67 76, 63 71, 58 69" fill="none" stroke="url(#chamaGrad)" stroke-width="7" stroke-linecap="round" />
+    </g>
+  </defs>
+</svg>
+
+<!-- ================= TOPBAR ================= -->
+<header class="topbar">
+  <div class="wrap reveal d1">
+    <a class="brand" href="/" aria-label="Light It Up, voltar para a página inicial">
+      <svg class="flame-svg flame-glow" width="34" height="40" viewBox="0 0 100 100" aria-hidden="true">
+        <use href="#flameMark" xlink:href="#flameMark" />
+      </svg>
+      <span class="brand-name">Light It Up</span>
+    </a>
+    <nav class="lang-switch" aria-label="Idioma / Language">
+      <a href="#pt" hreflang="pt-BR">Português</a>
+      <a href="#en" hreflang="en" lang="en">English</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-head">
+    <div class="wrap">
+      <svg class="flame-svg flame-glow flame-anim hero-flame reveal d1" width="64" height="77" viewBox="0 0 100 100" aria-hidden="true">
+        <use href="#flameMark" xlink:href="#flameMark" />
+      </svg>
+      <h1 class="reveal d1">Política de Privacidade</h1>
+      <p class="updated reveal d2">Atualizada em 30 de outubro de 2026 <span lang="en">· Last updated October 30, 2026</span></p>
+    </div>
+  </section>
+
+  <!-- ================= PORTUGUÊS ================= -->
+  <div class="wrap">
+    <article class="card reveal d2" id="pt" lang="pt-BR">
+      <span class="lang-tag">Português</span>
+      <h2>Como cuidamos dos seus dados</h2>
+      <p class="lead">Esta política explica, de forma simples, quais dados a Light It Up coleta, para que usa e quais são os seus direitos. Ela vale para o site golightitup.com e para a lista de e-mails da Alê.</p>
+
+      <p class="promise">Seus dados nunca são vendidos.</p>
+
+      <h3>1. Quem é responsável pelos seus dados</h3>
+      <p>Alê Nogueira, Light It Up.</p>
+      <address>
+        2101 Park Center Dr, Suite 150, Orlando, FL 32835, USA<br />
+        E-mail: <a href="mailto:alethisisit@gmail.com">alethisisit@gmail.com</a>
+      </address>
+
+      <h3>2. Quais dados coletamos e para quê</h3>
+      <p>Quando você se inscreve pelo formulário, coletamos:</p>
+      <ul>
+        <li>nome;</li>
+        <li>e-mail;</li>
+        <li>país onde você mora;</li>
+        <li>seu interesse principal.</li>
+      </ul>
+      <p>Usamos esses dados para enviar o material que você pediu e e-mails da Alê sobre bem-estar, a tecnologia X39 e conteúdos relacionados. O país e o interesse servem para enviar conteúdo adequado ao lugar onde você mora e ao que faz sentido para você.</p>
+
+      <h3>3. Base legal: o seu consentimento</h3>
+      <p>Só enviamos e-mails a quem autorizou. A caixa de consentimento do formulário vem desmarcada, e é você quem decide marcar. Para quem mora na Europa e no Canadá, há ainda uma confirmação dupla: você recebe um e-mail e só entra na lista depois de confirmar. Você pode retirar o consentimento a qualquer momento, sem custo.</p>
+
+      <h3>4. Quem processa os dados</h3>
+      <ul>
+        <li><strong>Brevo</strong>: plataforma de e-mail que guarda a lista e envia as mensagens. É uma empresa europeia, sediada na França, que segue o GDPR (Regulamento Geral de Proteção de Dados da União Europeia).</li>
+        <li><strong>Vercel</strong>: hospedagem do site. Como todo servidor, registra dados técnicos de acesso (como endereço IP, navegador e página visitada) para entregar o site e manter a segurança.</li>
+      </ul>
+      <p>Esses fornecedores tratam os dados apenas para prestar o serviço contratado. Como a Alê mora nos Estados Unidos, os dados podem ser acessados de lá.</p>
+
+      <h3>5. Cookies e conteúdos de terceiros no site</h3>
+      <p>O site golightitup.com não usa ferramentas de analytics nem cookies próprios de rastreamento ou publicidade. Ele carrega dois serviços externos:</p>
+      <ul>
+        <li><strong>Google Fonts</strong>: as fontes do site vêm dos servidores do Google, que recebem dados técnicos como o seu endereço IP.</li>
+        <li><strong>Vimeo</strong>: o vídeo da página inicial é exibido por um player do Vimeo, que pode usar cookies e registrar dados técnicos conforme a política de privacidade do próprio Vimeo.</li>
+      </ul>
+      <p>Os botões do site levam para serviços externos (loja LifeWave, WhatsApp, Google Agenda e Instagram). Ao clicar, valem as políticas de privacidade de cada um deles. Compras feitas na loja LifeWave são tratadas pela LifeWave, conforme a política dela.</p>
+
+      <h3>6. Seus direitos</h3>
+      <ul>
+        <li><strong>Sair da lista a qualquer momento</strong> pelo link de descadastro que está em todo e-mail.</li>
+        <li><strong>Pedir acesso, correção ou exclusão</strong> dos seus dados escrevendo para <a href="mailto:alethisisit@gmail.com">alethisisit@gmail.com</a>.</li>
+        <li>Se você mora na Europa ou em outro lugar com lei de proteção de dados, também pode apresentar uma reclamação à autoridade de proteção de dados do seu país.</li>
+      </ul>
+
+      <h3>7. Por quanto tempo guardamos</h3>
+      <p>Guardamos os seus dados enquanto você estiver inscrita ou inscrito na lista. Depois do descadastro, mantemos apenas o mínimo necessário (o e-mail e o registro do descadastro) para garantir que você não volte a receber mensagens.</p>
+
+      <h3>8. Divulgação</h3>
+      <p>Alê Nogueira é Brand Partner Independente LifeWave. A Light It Up não é a LifeWave, e esta política não é da LifeWave.</p>
+
+      <h3>9. Mudanças nesta política</h3>
+      <p>Se esta política mudar, a nova versão será publicada nesta página com a data de atualização.</p>
+    </article>
+
+    <!-- ================= ENGLISH ================= -->
+    <article class="card reveal d3" id="en" lang="en">
+      <span class="lang-tag">English</span>
+      <h2>Privacy Policy</h2>
+      <p class="lead">This policy explains, in plain language, what data Light It Up collects, how it is used and what your rights are. It applies to the golightitup.com website and to Alê's email list.</p>
+
+      <p class="promise">Your data is never sold.</p>
+
+      <h3>1. Who is responsible for your data</h3>
+      <p>Alê Nogueira, Light It Up.</p>
+      <address>
+        2101 Park Center Dr, Suite 150, Orlando, FL 32835, USA<br />
+        Email: <a href="mailto:alethisisit@gmail.com">alethisisit@gmail.com</a>
+      </address>
+
+      <h3>2. What data we collect and why</h3>
+      <p>When you sign up through the form, we collect:</p>
+      <ul>
+        <li>name;</li>
+        <li>email address;</li>
+        <li>country where you live;</li>
+        <li>your main interest.</li>
+      </ul>
+      <p>We use this data to send you the material you requested and emails from Alê about well-being, X39 technology and related content. Your country and interest help us send content that fits where you live and what matters to you.</p>
+
+      <h3>3. Legal basis: your consent</h3>
+      <p>We only email people who have given permission. The consent box on the form is unchecked by default, and you decide whether to check it. If you live in Europe or Canada, there is also a double opt-in: you receive an email and are only added to the list after you confirm. You can withdraw your consent at any time, free of charge.</p>
+
+      <h3>4. Who processes the data</h3>
+      <ul>
+        <li><strong>Brevo</strong>: the email platform that stores the list and sends the messages. It is a European company based in France that complies with the GDPR (EU General Data Protection Regulation).</li>
+        <li><strong>Vercel</strong>: website hosting. Like any server, it logs technical access data (such as IP address, browser and page visited) to deliver the site and keep it secure.</li>
+      </ul>
+      <p>These providers process data only to deliver the contracted service. Because Alê lives in the United States, the data may be accessed from there.</p>
+
+      <h3>5. Cookies and third party content on the site</h3>
+      <p>The golightitup.com website does not use analytics tools or its own tracking or advertising cookies. It loads two external services:</p>
+      <ul>
+        <li><strong>Google Fonts</strong>: the site fonts are served by Google, which receives technical data such as your IP address.</li>
+        <li><strong>Vimeo</strong>: the video on the home page is shown in a Vimeo player, which may use cookies and log technical data under Vimeo's own privacy policy.</li>
+      </ul>
+      <p>The buttons on the site link to external services (LifeWave store, WhatsApp, Google Calendar and Instagram). Once you click, their own privacy policies apply. Purchases made in the LifeWave store are handled by LifeWave under its own policy.</p>
+
+      <h3>6. Your rights</h3>
+      <ul>
+        <li><strong>Unsubscribe at any time</strong> using the link included in every email.</li>
+        <li><strong>Request access to, correction or deletion</strong> of your data by writing to <a href="mailto:alethisisit@gmail.com">alethisisit@gmail.com</a>.</li>
+        <li>If you live in Europe or anywhere else with a data protection law, you may also lodge a complaint with the data protection authority in your country.</li>
+      </ul>
+
+      <h3>7. How long we keep your data</h3>
+      <p>We keep your data while you are subscribed. After you unsubscribe, we keep only the minimum needed (your email address and the unsubscribe record) to make sure you do not receive messages again.</p>
+
+      <h3>8. Disclosure</h3>
+      <p>Alê Nogueira is an Independent LifeWave Brand Partner. Light It Up is not LifeWave, and this is not LifeWave's policy.</p>
+
+      <h3>9. Changes to this policy</h3>
+      <p>If this policy changes, the new version will be posted on this page with its update date.</p>
+    </article>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <svg class="flame-svg flame-glow foot-flame" width="36" height="43" viewBox="0 0 100 100" aria-hidden="true">
+      <use href="#flameMark" xlink:href="#flameMark" />
+    </svg>
+    <p class="foot-title">Light It Up, movimento fundado por Alessandra Nogueira.</p>
+    <p class="hashtag">#LifeWaveIndependentBrandPartner</p>
+    <a class="back" href="/">Voltar para a página inicial</a>
+  </div>
+</footer>
+
+</body>
+</html>

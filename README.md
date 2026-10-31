@@ -27,3 +27,24 @@ Substitui a página antiga do GoDaddy Website Builder.
    - `A` em `@` → `76.76.21.21` (IP da Vercel)
    - `CNAME` em `www` → `cname.vercel-dns.com`
    - **NÃO tocar nos registros MX / TXT de email.** Só mexer em A e CNAME de web.
+
+## Isca "Peptídeos sem mistério" (branch `isca-peptideos`)
+| Arquivo | O que é |
+|---|---|
+| `peptideos.html` | Página de captura (nome, e-mail, país, interesse, consentimento desmarcado). Não está linkada na `index.html`. |
+| `api/inscrever.js` | Função serverless da Vercel (Node, `fetch` nativo). Valida e chama a Brevo com confirmação dupla (`/v3/contacts/doubleOptinConfirmation`) para todos os países. |
+| `peptideos-obrigada.html` | Página após o clique de confirmação (noindex). Sem menção à LifeWave, porque contatos do Brasil também caem aqui. |
+| `guia-peptideos.html` | Guia versão A (noindex, sem link no site, CSS de impressão). |
+| `guia-peptideos-b.html` | Guia versão B, para quem marcou Brasil: sem LifeWave, sem X39, sem hashtag. |
+| `vercel.json` | Cabeçalho `X-Robots-Tag: noindex` nas páginas do guia e de obrigada. |
+
+### Variáveis de ambiente (Vercel → Settings → Environment Variables)
+- `BREVO_API_KEY` (obrigatória; nunca no código nem no repositório)
+- `BREVO_DOI_TEMPLATE_ID` (obrigatória; id numérico do template de confirmação dupla)
+- `BREVO_DOI_REDIRECT` (opcional; padrão `https://golightitup.com/peptideos-obrigada.html`)
+- `BREVO_LIST_ID` (opcional; padrão `6`, lista "Isca Peptídeos")
+
+### Atributos gravados na Brevo
+`FIRSTNAME`, `PAIS` (US, CA, MX, PT, EU, JP, AU, NZ, ASIA, BR, OUTRO), `PAIS_OUTRO` (texto livre, só se existir na conta), `INTERESSE` (cuidar_fase, envelhecer_qv, ciencia, construir_algo), `ORIGEM` = "Isca Peptídeos", `TRILHO` (BRASIL se PAIS=BR; OPORTUNIDADE se construir_algo fora do Brasil; senão CLIENTE), `CONSENTIMENTO` (texto + data/hora ISO), `DATA_CADASTRO` (data de Orlando).
+
+Proteções: honeypot (`empresa`), checagem de origem, nenhum log com e-mail, nome ou chave. Sem JavaScript, o formulário nativo também funciona (volta para `#enviado` ou `#erro`).

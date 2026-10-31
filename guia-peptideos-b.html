@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex,nofollow" />
+<title>Peptídeos sem mistério | Light It Up</title>
+<meta name="theme-color" content="#FAF4EA" />
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="apple-touch-icon" href="/favicon.svg" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Mulish:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --luz: #FAF4EA;
+    --creme: #FFFBF4;
+    --brasa: #211436;
+    --tinta: #35293F;
+    --ouro: #F5B13C;
+    --ember: #FF6A2B;
+    --ember-ink: #DB551C;
+    --chama: linear-gradient(165deg, #FF6A2B 0%, #F5B13C 100%);
+    --tinta-dim: rgba(53, 41, 63, 0.78);
+    --tinta-faint: rgba(33, 20, 54, 0.08);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    background-color: var(--luz);
+    color: var(--tinta);
+    font-family: "Mulish", "Segoe UI", sans-serif;
+    font-size: 1.04rem;
+    line-height: 1.75;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    background:
+      radial-gradient(ellipse 90% 55% at 50% -12%, rgba(245, 177, 60, 0.26) 0%, rgba(245, 177, 60, 0) 60%),
+      radial-gradient(ellipse 70% 50% at 12% 8%, rgba(255, 106, 43, 0.09) 0%, rgba(255, 106, 43, 0) 55%);
+  }
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    opacity: 0.55;
+    background-image:
+      linear-gradient(var(--tinta-faint) 1px, transparent 1px),
+      linear-gradient(90deg, var(--tinta-faint) 1px, transparent 1px);
+    background-size: 64px 64px;
+    -webkit-mask-image: radial-gradient(ellipse 100% 60% at 50% 0%, #000 0%, transparent 65%);
+            mask-image: radial-gradient(ellipse 100% 60% at 50% 0%, #000 0%, transparent 65%);
+  }
+
+  .wrap { width: 100%; max-width: 760px; margin: 0 auto; padding: 0 18px; }
+
+  a { color: var(--ember-ink); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+  a:hover { color: var(--brasa); }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--ember); outline-offset: 3px; border-radius: 6px; }
+
+  .flame-svg { display: block; }
+  .flame-glow { filter: drop-shadow(0 6px 18px rgba(255, 106, 43, 0.28)); }
+
+  /* ---------- TOPO ---------- */
+  .topbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 20px 0 6px; }
+  .brand { display: inline-flex; align-items: center; gap: 10px; color: var(--brasa); }
+  .brand-name { font-family: "Fraunces", Georgia, serif; font-weight: 500; font-size: 1.12rem; letter-spacing: -0.01em; }
+  .print-btn {
+    font: inherit;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--brasa);
+    padding: 8px 14px;
+    border-radius: 999px;
+    border: 1px solid rgba(33, 20, 54, 0.16);
+    background: rgba(255, 255, 255, 0.65);
+    cursor: pointer;
+    transition: transform 0.25s ease, border-color 0.25s ease;
+    white-space: nowrap;
+  }
+  .print-btn:hover { transform: scale(1.02); border-color: var(--ouro); }
+  .brand-name { white-space: nowrap; }
+  @media (max-width: 400px) {
+    .brand-name { font-size: 1.02rem; }
+    .print-btn { font-size: 0.76rem; padding: 7px 11px; }
+  }
+
+  /* ---------- CABEÇALHO DO GUIA ---------- */
+  .guide-head { padding: 26px 0 22px; }
+  .guide-head h1 {
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 500;
+    font-size: clamp(2.2rem, 9vw, 3.4rem);
+    line-height: 1.04;
+    letter-spacing: -0.03em;
+    background: var(--chama);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--ember-ink);
+    padding-bottom: 0.06em;
+  }
+  .guide-head .dek {
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 400;
+    font-size: clamp(1.12rem, 4.2vw, 1.34rem);
+    line-height: 1.45;
+    color: var(--brasa);
+    margin-top: 14px;
+  }
+  .guide-head .meta { margin-top: 12px; font-size: 0.9rem; font-style: italic; color: var(--tinta-dim); }
+
+  /* ---------- CORPO ---------- */
+  .sheet {
+    background: var(--creme);
+    border: 1px solid rgba(33, 20, 54, 0.06);
+    border-radius: 24px;
+    padding: 28px 20px;
+    box-shadow: 0 22px 55px rgba(33, 20, 54, 0.08), 0 2px 8px rgba(33, 20, 54, 0.04);
+  }
+  .intro { font-size: 1.08rem; color: var(--brasa); }
+
+  .block { padding-top: 26px; margin-top: 26px; border-top: 1px solid rgba(33, 20, 54, 0.08); }
+  .block h2 {
+    display: flex;
+    gap: 12px;
+    align-items: baseline;
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 500;
+    font-size: clamp(1.28rem, 5vw, 1.55rem);
+    line-height: 1.25;
+    letter-spacing: -0.015em;
+    color: var(--brasa);
+    margin-bottom: 10px;
+  }
+  .block h2 .n {
+    flex: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: inline-grid;
+    place-items: center;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #2a1405;
+    background: var(--chama);
+    transform: translateY(-2px);
+  }
+  .block p + p { margin-top: 12px; }
+  .block strong { color: var(--brasa); font-weight: 800; }
+
+  .source { font-size: 0.84rem; font-style: italic; color: var(--tinta-dim); line-height: 1.6; }
+  .block p.source { margin-top: 14px; }
+
+  .filters { display: grid; gap: 12px; }
+  .filters p {
+    margin: 0 !important;
+    padding: 14px 16px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(33, 20, 54, 0.07);
+  }
+
+  .pocket {
+    padding: 18px 18px;
+    border-radius: 18px;
+    background: linear-gradient(165deg, rgba(255, 106, 43, 0.08) 0%, rgba(245, 177, 60, 0.13) 100%);
+    border: 1px solid rgba(245, 177, 60, 0.38);
+  }
+  .pocket p:first-child { font-family: "Fraunces", Georgia, serif; font-size: 1.16rem; line-height: 1.5; color: var(--brasa); }
+
+  .note {
+    margin-top: 16px;
+    padding: 14px 16px;
+    border-left: 3px solid var(--ember);
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 0 14px 14px 0;
+  }
+  .disclaimer-inline { font-size: 0.86rem; font-style: italic; color: var(--tinta-dim); }
+
+  /* ---------- RODAPÉ ---------- */
+  footer { text-align: center; padding: 30px 0 46px; font-size: 0.86rem; color: var(--tinta-dim); line-height: 1.6; }
+  footer .foot-flame { margin: 0 auto 10px; }
+  footer p + p { margin-top: 6px; }
+  footer .who { color: var(--brasa); font-weight: 700; }
+  footer .hashtag { color: var(--ember-ink); font-weight: 700; white-space: nowrap; }
+
+  @media (min-width: 560px) {
+    .wrap { padding: 0 28px; }
+    .sheet { padding: 40px 40px; }
+  }
+
+  /* ---------- IMPRESSÃO ---------- */
+  @page { size: A4; margin: 16mm 15mm; }
+  @media print {
+    body { background: #fff; color: #222; font-size: 10.5pt; line-height: 1.55; }
+    body::before, body::after { display: none; }
+    .print-btn, .no-print { display: none !important; }
+    .wrap { max-width: none; padding: 0; }
+    .topbar { padding: 0 0 4mm; }
+    .guide-head { padding: 0 0 4mm; }
+    .guide-head h1 { font-size: 26pt; -webkit-text-fill-color: #DB551C; background: none; color: #DB551C; }
+    .guide-head .dek { font-size: 13pt; }
+    .sheet { box-shadow: none; border: 0; padding: 0; background: #fff; border-radius: 0; }
+    .block { margin-top: 5mm; padding-top: 5mm; break-inside: avoid; page-break-inside: avoid; }
+    .block h2 { font-size: 13.5pt; break-after: avoid; page-break-after: avoid; }
+    .block h2 .n, .takeaways .num { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .filters p, .note, .pocket { background: #fff; border: 1px solid #ddd; }
+    .source { font-size: 8.5pt; }
+    a { color: #222; text-decoration: none; }
+    footer { padding: 6mm 0 0; border-top: 1px solid #ddd; margin-top: 6mm; font-size: 8.5pt; color: #444; }
+    .flame-glow { filter: none; }
+  }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="chamaGrad" x1="0" y1="1" x2="0.35" y2="0">
+      <stop offset="0%" stop-color="#FF6A2B" />
+      <stop offset="100%" stop-color="#F5B13C" />
+    </linearGradient>
+    <g id="flameMark">
+      <path d="M50 3 C 58 20, 74 30, 74 52 C 74 66, 64 76, 50 76 C 36 76, 26 66, 26 52 C 26 40, 34 34, 39 40 C 41 30, 46 22, 50 3 Z" fill="url(#chamaGrad)" />
+      <path d="M50 34 C 55 44, 60 50, 60 58 C 60 65, 55 70, 50 70 C 45 70, 40 65, 40 58 C 40 52, 44 49, 47 52 C 48 46, 49 41, 50 34 Z" fill="#FAF4EA" opacity="0.95" />
+      <path d="M50 66 C 40 66, 33 73, 33 82 C 33 91, 40 98, 50 98 C 60 98, 67 91, 67 82 C 67 76, 63 71, 58 69" fill="none" stroke="url(#chamaGrad)" stroke-width="7" stroke-linecap="round" />
+    </g>
+  </defs>
+</svg>
+
+<div class="wrap">
+  <header class="topbar">
+    <span class="brand">
+      <svg class="flame-svg flame-glow" width="28" height="34" viewBox="0 0 100 100" aria-hidden="true">
+        <use href="#flameMark" xlink:href="#flameMark" />
+      </svg>
+      <span class="brand-name">Light It Up</span>
+    </span>
+    <button class="print-btn" type="button" onclick="window.print()">Imprimir ou salvar em PDF</button>
+  </header>
+
+  <main>
+    <header class="guide-head">
+      <h1>Peptídeos sem mistério</h1>
+      <p class="dek">O que são, por que todo mundo está falando deles e onde o peptídeo de cobre entra nessa história. Um guia em português para quem mora fora do Brasil.</p>
+      <p class="meta">Leitura de 4 minutos · por Alê Nogueira</p>
+    </header>
+
+    <article class="sheet">
+      <p class="intro">Você vê a palavra "peptides" num rótulo, ouve num podcast, escuta na conversa da academia. Em inglês, em todo lugar. E quase ninguém para e explica, em português, o que isso quer dizer. Este guia faz exatamente isso: sem jargão e sem promessa.</p>
+
+      <section class="block">
+        <h2><span class="n">1</span><span>O assunto explodiu, e não é impressão sua</span></h2>
+        <p>Segundo o Google Trends, o interesse mundial de busca pelo termo "peptides" entre janeiro e setembro de 2026 ficou cerca de <strong>10 vezes</strong> acima do mesmo período de 2022. Nos Estados Unidos, cerca de <strong>8 vezes</strong>. O pico de toda a série foi em abril de 2026.</p>
+        <p>Quando um termo técnico cresce assim, aparece de tudo: explicação boa, explicação pela metade e promessa exagerada. Vamos começar pelo básico.</p>
+        <p class="source">Fonte: Google Trends, buscas no Google pelo termo "peptides", mundo e Estados Unidos, média de janeiro a setembro de 2026 comparada com janeiro a setembro de 2022. Índice relativo de interesse (0 a 100), não número de pessoas. Consulta em 25/09/2026.</p>
+      </section>
+
+      <section class="block">
+        <h2><span class="n">2</span><span>O que é um peptídeo, em uma frase</span></h2>
+        <p>Pense nos aminoácidos como <strong>letras</strong>. Um peptídeo é uma <strong>palavra curta</strong> formada por essas letras. Uma proteína é um <strong>texto longo</strong>. Mesmas letras, tamanhos diferentes.</p>
+        <p>E para que servem essas palavras curtas? Muitas funcionam como <strong>recados</strong>: mensagens que uma célula manda para outra. Boa parte desses recados o seu próprio corpo produz, todos os dias, sem você perceber. Por isso a ciência se interessa tanto por eles: entender os recados é entender um pouco melhor como o corpo se organiza.</p>
+      </section>
+
+      <section class="block">
+        <h2><span class="n">3</span><span>O peptídeo de cobre: o tal do GHK-Cu</span></h2>
+        <p>Entre esses recados, um ganhou nome próprio nas buscas: o <strong>GHK-Cu</strong>, conhecido como <strong>peptídeo de cobre</strong>.</p>
+        <p>O nome parece código, mas é simples. G, H e K são as letras que a ciência usa para três aminoácidos: glicina, histidina e lisina. Cu é o símbolo químico do cobre. Três letras e um átomo de cobre.</p>
+        <p>Ele foi descrito pela primeira vez nos anos 1970, em estudos com plasma humano, e é estudado por pesquisadores desde então. O ponto mais importante: <strong>é um peptídeo que o seu próprio corpo produz.</strong> Antes de virar busca no Google, ele já fazia parte de você.</p>
+      </section>
+
+      <section class="block">
+        <h2><span class="n">4</span><span>Por que ele virou assunto agora</span></h2>
+        <p>Em 2022, o termo "GHK-Cu" praticamente não aparecia nas buscas mundiais do Google. Em 2026, passou a ter interesse próprio e constante. Hoje ele aparece em podcasts de ciência e bem-estar e em notícias sobre pesquisa.</p>
+        <p>Isso é bom, porque mais gente quer entender o próprio corpo. E pede cuidado, porque nome técnico em alta atrai promessa fácil. Por isso o próximo bloco é o mais importante deste guia.</p>
+        <p class="source">Fonte: Google Trends, buscas no Google pelo termo "GHK-Cu", mundo, janeiro a setembro de 2022 e de 2026. Índice relativo de interesse, não número de pessoas. Consulta em 25/09/2026.</p>
+      </section>
+
+      <section class="block">
+        <h2><span class="n">5</span><span>Três filtros para não cair em promessa</span></h2>
+        <div class="filters">
+          <p><strong>Filtro 1. Promessa grande demais é sinal de alerta.</strong> Cura, resultado garantido, mudança da noite para o dia. Ciência séria fala em "pode", "apoia", "está sendo estudado".</p>
+          <p><strong>Filtro 2. Pergunte a fonte.</strong> Quem disse? Onde foi publicado? Quando? Se ninguém sabe responder, é opinião, não informação.</p>
+          <p><strong>Filtro 3. Seu médico vem primeiro.</strong> Antes de colocar qualquer novidade na sua rotina de saúde, converse com seu médico, principalmente se você usa medicamentos. E nunca interrompa um tratamento por conta própria.</p>
+        </div>
+      </section>
+
+      <section class="block">
+        <h2><span class="n">6</span><span>Resumo de bolso</span></h2>
+        <div class="pocket">
+          <p>Aminoácidos são letras. Peptídeos são palavras. O peptídeo de cobre é um recado que o seu corpo já conhece.</p>
+          <p>Agora você sabe explicar. E sabe filtrar.</p>
+        </div>
+      </section>
+
+      <!--BLOCO7-->
+      <section class="block">
+        <h2><span class="n">7</span><span>Uma nota para você</span></h2>
+        <div class="note">
+          <p>Este guia foi escrito pensando em brasileiros que moram fora do Brasil, e você é muito bem-vindo por aqui. O que ele ensina vale onde você estiver: use os três filtros do bloco 5 sempre que o assunto peptídeos aparecer e converse com seu médico antes de mudar a sua rotina de saúde.</p>
+        </div>
+      </section>
+      <!--/BLOCO7-->
+    </article>
+  </main>
+
+  <!--RODAPE-->
+  <footer>
+    <svg class="flame-svg flame-glow foot-flame" width="26" height="31" viewBox="0 0 100 100" aria-hidden="true">
+      <use href="#flameMark" xlink:href="#flameMark" />
+    </svg>
+    <p class="who">Alê Nogueira · Light It Up</p>
+    <p>Conteúdo educativo. Não substitui orientação médica. Converse com seu médico antes de mudar sua rotina de saúde.</p>
+  </footer>
+  <!--/RODAPE-->
+</div>
+
+</body>
+</html>

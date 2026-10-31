@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Peptídeos sem mistério | Guia gratuito | Light It Up</title>
+<meta name="description" content="Guia gratuito de 1 página, em português, para brasileiros que moram fora do Brasil e ouvem falar de peptides em todo lugar. Leitura de 4 minutos." />
+<meta name="theme-color" content="#FAF4EA" />
+<link rel="canonical" href="https://golightitup.com/peptideos.html" />
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="apple-touch-icon" href="/favicon.svg" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Peptídeos sem mistério | Guia gratuito" />
+<meta property="og:description" content="Todo mundo está falando de peptídeos. Em 4 minutos, você vai entender o porquê." />
+<meta property="og:url" content="https://golightitup.com/peptideos.html" />
+<meta property="og:site_name" content="Light It Up" />
+<meta property="og:locale" content="pt_BR" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Mulish:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --luz: #FAF4EA;
+    --creme: #FFFBF4;
+    --brasa: #211436;
+    --tinta: #35293F;
+    --ouro: #F5B13C;
+    --ember: #FF6A2B;
+    --ember-ink: #DB551C;
+    --erro: #B3261E;
+    --chama: linear-gradient(165deg, #FF6A2B 0%, #F5B13C 100%);
+    --tinta-dim: rgba(53, 41, 63, 0.78);
+    --tinta-faint: rgba(33, 20, 54, 0.08);
+    --linha: rgba(33, 20, 54, 0.16);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    background-color: var(--luz);
+    color: var(--tinta);
+    font-family: "Mulish", "Segoe UI", sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    background:
+      radial-gradient(ellipse 90% 55% at 50% -12%, rgba(245, 177, 60, 0.28) 0%, rgba(245, 177, 60, 0) 60%),
+      radial-gradient(ellipse 70% 50% at 12% 8%, rgba(255, 106, 43, 0.10) 0%, rgba(255, 106, 43, 0) 55%),
+      radial-gradient(ellipse 75% 55% at 92% 4%, rgba(255, 176, 120, 0.14) 0%, rgba(255, 176, 120, 0) 55%);
+  }
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    opacity: 0.6;
+    background-image:
+      linear-gradient(var(--tinta-faint) 1px, transparent 1px),
+      linear-gradient(90deg, var(--tinta-faint) 1px, transparent 1px);
+    background-size: 64px 64px;
+    -webkit-mask-image: radial-gradient(ellipse 100% 78% at 50% 0%, #000 0%, transparent 68%);
+            mask-image: radial-gradient(ellipse 100% 78% at 50% 0%, #000 0%, transparent 68%);
+  }
+
+  .wrap { width: 100%; max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+
+  a { color: var(--ember-ink); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+  a:hover { color: var(--brasa); }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--ember); outline-offset: 3px; border-radius: 6px; }
+
+  .skip { position: absolute; left: -9999px; top: 0; }
+  .skip:focus { left: 16px; top: 12px; background: var(--creme); padding: 8px 14px; border-radius: 10px; z-index: 10; }
+
+  .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+
+  .flame-svg { display: block; }
+  .flame-glow { filter: drop-shadow(0 6px 18px rgba(255, 106, 43, 0.28)); }
+
+  /* ---------- TOPBAR ---------- */
+  header.topbar { position: relative; z-index: 3; padding: 20px 0 4px; }
+  .brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; color: var(--brasa); }
+  .brand-name { font-family: "Fraunces", Georgia, serif; font-weight: 500; font-size: 1.2rem; letter-spacing: -0.01em; }
+
+  /* ---------- HERO ---------- */
+  .hero { display: grid; grid-template-columns: 1fr; gap: 28px; padding: 28px 0 48px; align-items: start; }
+  .hero > * { min-width: 0; }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: var(--ember-ink);
+    padding: 7px 14px;
+    border-radius: 999px;
+    border: 1px solid rgba(245, 177, 60, 0.45);
+    background: rgba(255, 255, 255, 0.65);
+    -webkit-backdrop-filter: blur(6px);
+            backdrop-filter: blur(6px);
+  }
+  .badge .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--ember); box-shadow: 0 0 0 0 rgba(255, 106, 43, 0.55); animation: pulse 2.2s ease-out infinite; flex: none; }
+
+  .hero h1 {
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 500;
+    font-size: clamp(2rem, 7.2vw, 3.3rem);
+    line-height: 1.08;
+    letter-spacing: -0.03em;
+    color: var(--brasa);
+    margin: 18px 0 16px;
+  }
+  .hero h1 .accent {
+    background: var(--chama);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--ember-ink);
+  }
+  .hero .sub { font-size: 1.08rem; color: var(--tinta-dim); max-width: 34em; }
+
+  .takeaways { margin-top: 26px; }
+  .takeaways h2 {
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--brasa);
+    margin-bottom: 12px;
+  }
+  .takeaways ul { list-style: none; display: grid; gap: 12px; }
+  .takeaways li {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    padding: 14px 16px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid rgba(33, 20, 54, 0.07);
+    -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+    transition: transform 0.25s ease, border-color 0.25s ease;
+  }
+  .takeaways li:hover { transform: scale(1.02); border-color: rgba(245, 177, 60, 0.5); }
+  .takeaways .num {
+    flex: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #2a1405;
+    background: var(--chama);
+  }
+  .takeaways li span:last-child { padding-top: 2px; }
+
+  /* ---------- FORM CARD ---------- */
+  .form-card {
+    position: relative;
+    background: var(--creme);
+    border: 1px solid rgba(33, 20, 54, 0.06);
+    border-radius: 26px;
+    padding: 28px 20px;
+    box-shadow: 0 22px 55px rgba(33, 20, 54, 0.10), 0 2px 8px rgba(33, 20, 54, 0.04);
+    scroll-margin-top: 16px;
+  }
+  .form-card::before {
+    content: "";
+    position: absolute;
+    inset: 0 22px auto;
+    height: 3px;
+    border-radius: 0 0 4px 4px;
+    background: var(--chama);
+  }
+
+  .field { margin-bottom: 18px; }
+  .field > label, fieldset legend {
+    display: block;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--brasa);
+    margin-bottom: 7px;
+  }
+  .field .hint { font-weight: 400; color: var(--tinta-dim); font-size: 0.85rem; }
+
+  input[type="text"], input[type="email"], select {
+    width: 100%;
+    max-width: 100%;
+    font: inherit;
+    font-size: 1rem;
+    color: var(--brasa);
+    background: #fff;
+    border: 1px solid var(--linha);
+    border-radius: 14px;
+    padding: 13px 14px;
+    min-height: 50px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  select {
+    -webkit-appearance: none;
+            appearance: none;
+    padding-right: 42px;
+    text-overflow: ellipsis;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cpath d='M1 1l6 6 6-6' fill='none' stroke='%23DB551C' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+  }
+  input:focus, select:focus { outline: none; border-color: var(--ember); box-shadow: 0 0 0 4px rgba(255, 106, 43, 0.16); }
+  [aria-invalid="true"] { border-color: var(--erro) !important; }
+
+  fieldset { border: 0; min-width: 0; }
+  .options { display: grid; gap: 8px; }
+  .option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 14px;
+    border-radius: 14px;
+    border: 1px solid var(--linha);
+    background: #fff;
+    cursor: pointer;
+    font-size: 0.98rem;
+    line-height: 1.4;
+    color: var(--brasa);
+    transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+  }
+  .option:hover { border-color: var(--ouro); transform: scale(1.01); }
+  .option input { accent-color: var(--ember); width: 18px; height: 18px; flex: none; margin: 0; }
+  .option:has(input:checked) { border-color: var(--ember); background: rgba(255, 106, 43, 0.06); }
+  .option:has(input:focus-visible) { box-shadow: 0 0 0 4px rgba(255, 106, 43, 0.16); }
+  fieldset[aria-invalid="true"] .option { border-color: rgba(179, 38, 30, 0.45); }
+
+  .consent {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    font-size: 0.9rem;
+    line-height: 1.55;
+    color: var(--tinta);
+    padding: 14px;
+    border-radius: 14px;
+    background: rgba(245, 177, 60, 0.08);
+    border: 1px solid rgba(245, 177, 60, 0.3);
+    cursor: pointer;
+  }
+  .consent input { accent-color: var(--ember); width: 20px; height: 20px; flex: none; margin-top: 1px; }
+  .consent.is-invalid { border-color: var(--erro); }
+
+  .err { display: none; color: var(--erro); font-size: 0.86rem; font-weight: 600; margin-top: 6px; }
+  .err.show { display: block; }
+
+  .hp { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    font-family: "Mulish", sans-serif;
+    font-weight: 800;
+    font-size: 1.05rem;
+    padding: 17px 24px;
+    border: 0;
+    border-radius: 999px;
+    cursor: pointer;
+    background: var(--chama);
+    color: #2a1405;
+    box-shadow: 0 10px 26px rgba(255, 106, 43, 0.30);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.2s ease;
+    margin-top: 16px;
+  }
+  .btn:hover { transform: translateY(-2px) scale(1.02); box-shadow: 0 14px 34px rgba(255, 106, 43, 0.42); }
+  .btn[disabled] { opacity: 0.75; cursor: progress; transform: none; }
+  .btn .spin { width: 18px; height: 18px; border-radius: 50%; border: 2px solid rgba(42, 20, 5, 0.25); border-top-color: #2a1405; animation: spin 0.8s linear infinite; display: none; }
+  .btn[disabled] .spin { display: inline-block; }
+
+  .privacy-line { margin-top: 14px; font-size: 0.84rem; line-height: 1.55; color: var(--tinta-dim); text-align: center; }
+
+  .form-error {
+    display: none;
+    margin-top: 14px;
+    padding: 12px 14px;
+    border-radius: 12px;
+    background: rgba(179, 38, 30, 0.07);
+    border: 1px solid rgba(179, 38, 30, 0.25);
+    color: var(--erro);
+    font-size: 0.92rem;
+    font-weight: 600;
+  }
+  .form-error.show, #erro:target { display: block; }
+
+  /* ---------- SUCESSO ---------- */
+  .success { display: none; text-align: center; padding: 18px 4px 6px; }
+  .success.show, #enviado:target { display: block; }
+  #enviado:target ~ form { display: none; }
+  .success .flame-svg { margin: 0 auto 16px; }
+  .success p { font-size: 1.06rem; color: var(--brasa); line-height: 1.65; }
+
+  /* ---------- FOOTER ---------- */
+  footer {
+    text-align: center;
+    padding: 34px 0 48px;
+    border-top: 1px solid rgba(33, 20, 54, 0.08);
+    font-size: 0.86rem;
+    color: var(--tinta-dim);
+    line-height: 1.6;
+  }
+  footer .foot-flame { margin: 0 auto 12px; }
+  footer p + p { margin-top: 6px; }
+  footer .disclosure { color: var(--brasa); font-weight: 600; }
+  footer .hashtag { color: var(--ember-ink); font-weight: 700; white-space: nowrap; }
+  footer .addr { overflow-wrap: anywhere; }
+  footer .links { margin-top: 12px; }
+
+  /* ---------- ANIMAÇÕES ---------- */
+  @keyframes rise { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(255, 106, 43, 0.55); } 70% { box-shadow: 0 0 0 9px rgba(255, 106, 43, 0); } 100% { box-shadow: 0 0 0 0 rgba(255, 106, 43, 0); } }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  @keyframes flicker {
+    0%, 100% { transform: scale(1) rotate(0deg); opacity: 1; }
+    45%      { transform: scale(1.04) rotate(-1deg); opacity: 0.92; }
+    70%      { transform: scale(0.985) rotate(0.6deg); opacity: 1; }
+  }
+  .reveal { opacity: 0; animation: rise 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+  .d1 { animation-delay: 0.05s; }
+  .d2 { animation-delay: 0.16s; }
+  .d3 { animation-delay: 0.28s; }
+  .d4 { animation-delay: 0.40s; }
+  .flame-anim { transform-origin: center bottom; animation: flicker 4.5s ease-in-out infinite; }
+
+  @media (min-width: 560px) {
+    .wrap { padding: 0 28px; }
+    .form-card { padding: 34px 30px; }
+  }
+  @media (min-width: 940px) {
+    .hero { grid-template-columns: 1.05fr 0.95fr; gap: 56px; padding: 48px 0 72px; }
+    .hero .copy { position: sticky; top: 32px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { animation: none; opacity: 1; }
+    .flame-anim, .badge .dot, .btn .spin { animation: none; }
+  }
+</style>
+</head>
+<body>
+
+<a class="skip" href="#inscricao">Ir para o formulário</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="chamaGrad" x1="0" y1="1" x2="0.35" y2="0">
+      <stop offset="0%" stop-color="#FF6A2B" />
+      <stop offset="100%" stop-color="#F5B13C" />
+    </linearGradient>
+    <g id="flameMark">
+      <path d="M50 3 C 58 20, 74 30, 74 52 C 74 66, 64 76, 50 76 C 36 76, 26 66, 26 52 C 26 40, 34 34, 39 40 C 41 30, 46 22, 50 3 Z" fill="url(#chamaGrad)" />
+      <path d="M50 34 C 55 44, 60 50, 60 58 C 60 65, 55 70, 50 70 C 45 70, 40 65, 40 58 C 40 52, 44 49, 47 52 C 48 46, 49 41, 50 34 Z" fill="#FAF4EA" opacity="0.95" />
+      <path d="M50 66 C 40 66, 33 73, 33 82 C 33 91, 40 98, 50 98 C 60 98, 67 91, 67 82 C 67 76, 63 71, 58 69" fill="none" stroke="url(#chamaGrad)" stroke-width="7" stroke-linecap="round" />
+    </g>
+  </defs>
+</svg>
+
+<header class="topbar">
+  <div class="wrap reveal d1">
+    <a class="brand" href="/" aria-label="Light It Up, ir para a página inicial">
+      <svg class="flame-svg flame-glow" width="32" height="38" viewBox="0 0 100 100" aria-hidden="true">
+        <use href="#flameMark" xlink:href="#flameMark" />
+      </svg>
+      <span class="brand-name">Light It Up</span>
+    </a>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="hero">
+
+    <!-- ================= COPY ================= -->
+    <section class="copy" aria-labelledby="titulo">
+      <span class="badge reveal d1"><span class="dot" aria-hidden="true"></span>Guia gratuito · leitura de 4 minutos</span>
+
+      <h1 id="titulo" class="reveal d2">Todo mundo está falando de peptídeos. <span class="accent">Em 4 minutos, você vai entender o porquê.</span></h1>
+
+      <p class="sub reveal d2">"Peptídeos sem mistério" é um guia gratuito de 1 página, em português, para brasileiros que moram fora do Brasil e ouvem falar de "peptides" em todo lugar.</p>
+
+      <div class="takeaways reveal d3">
+        <h2>O que você leva</h2>
+        <ul>
+          <li><span class="num" aria-hidden="true">1</span><span>O que é um peptídeo, explicado em uma frase que você não esquece mais.</span></li>
+          <li><span class="num" aria-hidden="true">2</span><span>Por que o peptídeo de cobre saiu do laboratório e virou assunto.</span></li>
+          <li><span class="num" aria-hidden="true">3</span><span>Três filtros simples para separar informação séria de promessa exagerada.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= FORMULÁRIO ================= -->
+    <section class="form-card reveal d4" id="inscricao" aria-label="Formulário para receber o guia">
+
+      <div class="success" id="enviado" role="status" aria-live="polite" tabindex="-1">
+        <svg class="flame-svg flame-glow flame-anim" width="56" height="67" viewBox="0 0 100 100" aria-hidden="true">
+          <use href="#flameMark" xlink:href="#flameMark" />
+        </svg>
+        <p>Pronto. Agora confira o seu e-mail: enviei um link para confirmar a inscrição. Assim que você clicar, o guia chega. Se não aparecer em alguns minutos, olhe a aba Promoções ou o spam.</p>
+      </div>
+
+      <form id="form-isca" action="/api/inscrever" method="post" novalidate>
+
+        <div class="field">
+          <label for="nome">Seu primeiro nome <span class="hint">(opcional)</span></label>
+          <input id="nome" name="nome" type="text" autocomplete="given-name" maxlength="60" />
+        </div>
+
+        <div class="field">
+          <label for="email">Seu melhor e-mail</label>
+          <input id="email" name="email" type="email" autocomplete="email" inputmode="email" maxlength="254" required aria-describedby="err-email" />
+          <p class="err" id="err-email">Confira o seu e-mail: parece que falta alguma coisa.</p>
+        </div>
+
+        <div class="field">
+          <label for="pais">Em que país você mora?</label>
+          <select id="pais" name="pais" required aria-describedby="err-pais">
+            <option value="" selected disabled>Escolha o país</option>
+            <option value="US">Estados Unidos</option>
+            <option value="CA">Canadá</option>
+            <option value="MX">México</option>
+            <option value="PT">Portugal</option>
+            <option value="EU">Outro país da Europa</option>
+            <option value="JP">Japão</option>
+            <option value="AU">Austrália</option>
+            <option value="NZ">Nova Zelândia</option>
+            <option value="ASIA">Ásia (Tailândia, Indonésia, Malásia, Singapura, Taiwan, Hong Kong, Macau, Filipinas)</option>
+            <option value="BR">Brasil</option>
+            <option value="OUTRO">Outro país</option>
+          </select>
+          <p class="err" id="err-pais">Escolha o país onde você mora.</p>
+        </div>
+
+        <div class="field" id="campo-outro" hidden>
+          <label for="pais_outro">Qual país?</label>
+          <input id="pais_outro" name="pais_outro" type="text" autocomplete="country-name" maxlength="60" />
+        </div>
+
+        <fieldset class="field" id="grupo-interesse" aria-describedby="err-interesse">
+          <legend>O que mais te trouxe até aqui?</legend>
+          <div class="options">
+            <label class="option"><input type="radio" name="interesse" value="cuidar_fase" required />Cuidar de mim nesta fase da vida</label>
+            <label class="option"><input type="radio" name="interesse" value="envelhecer_qv" />Envelhecer com qualidade de vida</label>
+            <label class="option"><input type="radio" name="interesse" value="ciencia" />Entender a ciência dos peptídeos</label>
+            <label class="option"><input type="radio" name="interesse" value="construir_algo" />Construir algo meu fora do Brasil</label>
+          </div>
+          <p class="err" id="err-interesse">Escolha uma opção para eu saber o que é mais útil para você.</p>
+        </fieldset>
+
+        <!-- Honeypot: invisível para pessoas -->
+        <div class="hp" aria-hidden="true">
+          <label for="empresa">Empresa</label>
+          <input id="empresa" name="empresa" type="text" tabindex="-1" autocomplete="off" />
+        </div>
+
+        <label class="consent" id="caixa-consentimento">
+          <input type="checkbox" id="consentimento" name="consentimento" value="sim" required aria-describedby="err-consentimento" />
+          <span>Aceito receber e-mails da Alê Nogueira, Brand Partner Independente LifeWave, com conteúdo sobre bem-estar, peptídeos e fototerapia, convites para encontros online e indicações de produtos. Posso sair quando quiser, com um clique no fim de qualquer e-mail.</span>
+        </label>
+        <p class="err" id="err-consentimento">Para receber o guia, marque a caixa de consentimento.</p>
+
+        <button class="btn" type="submit" id="btn-enviar">
+          <span class="spin" aria-hidden="true"></span>
+          <span class="btn-label">Quero receber o guia</span>
+        </button>
+
+        <p class="privacy-line">Seus dados servem para eu enviar estes e-mails e entender o que é mais útil para você. Eles nunca são vendidos. <a href="/privacidade.html">Política de privacidade</a></p>
+
+        <p class="form-error" id="erro" role="alert">Não consegui concluir a sua inscrição agora. Tente de novo em alguns minutos.</p>
+      </form>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <svg class="flame-svg flame-glow foot-flame" width="30" height="36" viewBox="0 0 100 100" aria-hidden="true">
+      <use href="#flameMark" xlink:href="#flameMark" />
+    </svg>
+    <p class="disclosure">Alê Nogueira, Brand Partner Independente LifeWave · <span class="hashtag">#LifeWaveIndependentBrandPartner</span></p>
+    <p class="addr">Light It Up · 2101 Park Center Drive, Suite 150, Orlando, FL 32835 · golightitup.com</p>
+    <p>Conteúdo educativo. Não substitui orientação médica. Resultados variam.</p>
+    <p class="links"><a href="/privacidade.html">Política de privacidade</a></p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var form = document.getElementById("form-isca");
+  var success = document.getElementById("enviado");
+  var btn = document.getElementById("btn-enviar");
+  var btnLabel = btn.querySelector(".btn-label");
+  var formError = document.getElementById("erro");
+  var pais = document.getElementById("pais");
+  var campoOutro = document.getElementById("campo-outro");
+  var emailRe = /^[^\s@<>()[\],;:"]+@[^\s@<>()[\],;:"]+\.[a-z]{2,}$/i;
+  var LABEL = "Quero receber o guia";
+  var LOADING = "Enviando...";
+
+  // Sem JavaScript, o formulário nativo funciona e a âncora #enviado/#erro mostra a mensagem.
+  var hash = location.hash;
+  if (hash === "#enviado") {
+    form.style.display = "none";
+    success.classList.add("show");
+  } else if (hash === "#erro") {
+    formError.classList.add("show");
+  }
+
+  pais.addEventListener("change", function () {
+    campoOutro.hidden = pais.value !== "OUTRO";
+    setError("pais", false);
+  });
+
+  function setError(name, on) {
+    var msg = document.getElementById("err-" + name);
+    if (msg) msg.classList.toggle("show", on);
+    if (name === "interesse") {
+      document.getElementById("grupo-interesse").setAttribute("aria-invalid", on ? "true" : "false");
+    } else if (name === "consentimento") {
+      document.getElementById("caixa-consentimento").classList.toggle("is-invalid", on);
+      document.getElementById("consentimento").setAttribute("aria-invalid", on ? "true" : "false");
+    } else {
+      var el = document.getElementById(name);
+      if (el) el.setAttribute("aria-invalid", on ? "true" : "false");
+    }
+  }
+
+  form.addEventListener("input", function (e) {
+    var t = e.target;
+    if (t.name === "email") setError("email", false);
+    if (t.name === "interesse") setError("interesse", false);
+    if (t.name === "consentimento") setError("consentimento", false);
+  });
+
+  function validate(data) {
+    var first = null;
+    var checks = [
+      ["email", emailRe.test(data.email)],
+      ["pais", !!data.pais],
+      ["interesse", !!data.interesse],
+      ["consentimento", data.consentimento === true]
+    ];
+    checks.forEach(function (c) {
+      setError(c[0], !c[1]);
+      if (!c[1] && !first) first = c[0];
+    });
+    return first;
+  }
+
+  function focusField(name) {
+    var el = name === "interesse" ? form.querySelector('input[name="interesse"]')
+      : document.getElementById(name);
+    if (el) el.focus();
+  }
+
+  function setLoading(on) {
+    btn.disabled = on;
+    btnLabel.textContent = on ? LOADING : LABEL;
+  }
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    formError.classList.remove("show");
+
+    var checked = form.querySelector('input[name="interesse"]:checked');
+    var data = {
+      nome: form.nome.value.trim(),
+      email: form.email.value.trim(),
+      pais: pais.value,
+      pais_outro: pais.value === "OUTRO" ? form.pais_outro.value.trim() : "",
+      interesse: checked ? checked.value : "",
+      consentimento: form.consentimento.checked,
+      empresa: form.empresa.value
+    };
+
+    var invalid = validate(data);
+    if (invalid) { focusField(invalid); return; }
+
+    setLoading(true);
+    fetch(form.action, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "Accept": "application/json" },
+      body: JSON.stringify(data)
+    })
+      .then(function (r) { return r.json().catch(function () { return { ok: false, erro: "servidor" }; }); })
+      .then(function (res) {
+        if (res && res.ok) {
+          form.style.display = "none";
+          success.classList.add("show");
+          success.focus();
+          return;
+        }
+        var campo = res && res.erro;
+        if (campo === "email" || campo === "pais" || campo === "interesse" || campo === "consentimento") {
+          setError(campo, true);
+          focusField(campo);
+        } else {
+          formError.classList.add("show");
+        }
+      })
+      .catch(function () { formError.classList.add("show"); })
+      .then(function () { setLoading(false); });
+  });
+})();
+</script>
+
+</body>
+</html>

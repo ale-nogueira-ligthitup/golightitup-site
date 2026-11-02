@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex,nofollow" />
+<title>Inscrição confirmada | Light It Up</title>
+<meta name="theme-color" content="#FAF4EA" />
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="apple-touch-icon" href="/favicon.svg" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Mulish:wght@400;600;700&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --luz: #FAF4EA;
+    --creme: #FFFBF4;
+    --brasa: #211436;
+    --tinta: #35293F;
+    --ouro: #F5B13C;
+    --ember: #FF6A2B;
+    --ember-ink: #DB551C;
+    --chama: linear-gradient(165deg, #FF6A2B 0%, #F5B13C 100%);
+    --tinta-dim: rgba(53, 41, 63, 0.78);
+    --tinta-faint: rgba(33, 20, 54, 0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--luz);
+    color: var(--tinta);
+    font-family: "Mulish", "Segoe UI", sans-serif;
+    line-height: 1.7;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    background:
+      radial-gradient(ellipse 90% 60% at 50% -10%, rgba(245, 177, 60, 0.30) 0%, rgba(245, 177, 60, 0) 60%),
+      radial-gradient(ellipse 70% 50% at 12% 8%, rgba(255, 106, 43, 0.10) 0%, rgba(255, 106, 43, 0) 55%);
+  }
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    opacity: 0.6;
+    background-image:
+      linear-gradient(var(--tinta-faint) 1px, transparent 1px),
+      linear-gradient(90deg, var(--tinta-faint) 1px, transparent 1px);
+    background-size: 64px 64px;
+    -webkit-mask-image: radial-gradient(ellipse 100% 78% at 50% 0%, #000 0%, transparent 68%);
+            mask-image: radial-gradient(ellipse 100% 78% at 50% 0%, #000 0%, transparent 68%);
+  }
+  a { color: var(--ember-ink); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+  a:hover { color: var(--brasa); }
+  a:focus-visible { outline: 2px solid var(--ember); outline-offset: 3px; border-radius: 6px; }
+
+  main { flex: 1; display: grid; place-items: center; padding: 48px 20px; }
+  .card {
+    width: 100%;
+    max-width: 540px;
+    text-align: center;
+    background: var(--creme);
+    border: 1px solid rgba(33, 20, 54, 0.06);
+    border-radius: 26px;
+    padding: 40px 24px 34px;
+    box-shadow: 0 22px 55px rgba(33, 20, 54, 0.10), 0 2px 8px rgba(33, 20, 54, 0.04);
+    opacity: 0;
+    animation: rise 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.05s forwards;
+  }
+  .flame { display: block; margin: 0 auto 18px; filter: drop-shadow(0 6px 18px rgba(255, 106, 43, 0.3)); transform-origin: center bottom; animation: flicker 4.5s ease-in-out infinite; }
+  h1 {
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 500;
+    font-size: clamp(2rem, 8vw, 2.6rem);
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    background: var(--chama);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--ember-ink);
+    padding-bottom: 0.06em;
+  }
+  .card p { margin-top: 14px; font-size: 1.06rem; color: var(--brasa); }
+  .card p.small { font-size: 0.94rem; color: var(--tinta-dim); }
+
+  footer { text-align: center; padding: 0 20px 36px; font-size: 0.86rem; color: var(--tinta-dim); }
+
+  @keyframes rise { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes flicker {
+    0%, 100% { transform: scale(1) rotate(0deg); opacity: 1; }
+    45%      { transform: scale(1.04) rotate(-1deg); opacity: 0.92; }
+    70%      { transform: scale(0.985) rotate(0.6deg); opacity: 1; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .card { animation: none; opacity: 1; }
+    .flame { animation: none; }
+  }
+</style>
+</head>
+<body>
+
+<main>
+  <section class="card" role="status">
+    <svg class="flame" width="64" height="77" viewBox="0 0 100 100" aria-hidden="true">
+      <defs>
+        <linearGradient id="chamaGrad" x1="0" y1="1" x2="0.35" y2="0">
+          <stop offset="0%" stop-color="#FF6A2B" />
+          <stop offset="100%" stop-color="#F5B13C" />
+        </linearGradient>
+      </defs>
+      <path d="M50 3 C 58 20, 74 30, 74 52 C 74 66, 64 76, 50 76 C 36 76, 26 66, 26 52 C 26 40, 34 34, 39 40 C 41 30, 46 22, 50 3 Z" fill="url(#chamaGrad)" />
+      <path d="M50 34 C 55 44, 60 50, 60 58 C 60 65, 55 70, 50 70 C 45 70, 40 65, 40 58 C 40 52, 44 49, 47 52 C 48 46, 49 41, 50 34 Z" fill="#FAF4EA" opacity="0.95" />
+      <path d="M50 66 C 40 66, 33 73, 33 82 C 33 91, 40 98, 50 98 C 60 98, 67 91, 67 82 C 67 76, 63 71, 58 69" fill="none" stroke="url(#chamaGrad)" stroke-width="7" stroke-linecap="round" />
+    </svg>
+    <h1>Inscrição confirmada.</h1>
+    <p>Seu guia "Peptídeos sem mistério" está chegando no seu e-mail.</p>
+    <p class="small">Se não aparecer em alguns minutos, olhe a aba Promoções ou o spam.</p>
+  </section>
+</main>
+
+<footer>
+  <p>Alê Nogueira · Light It Up</p>
+</footer>
+
+</body>
+</html>

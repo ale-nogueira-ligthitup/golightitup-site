@@ -1,4 +1,8 @@
 {
+  "rewrites": [
+    { "source": "/peptideos", "destination": "/peptideos.html" },
+    { "source": "/privacidade", "destination": "/privacidade.html" }
+  ],
   "headers": [
     { "source": "/guia-peptideos.html", "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }] },
     { "source": "/guia-peptideos-b.html", "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }] },
